@@ -33,6 +33,15 @@ public class Practice04DispatchDrawLayout extends LinearLayout {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
+    }
+
+    /**
+     * 此方法调用子View的绘制方法完成绘制
+     * @param canvas
+     */
+    @Override
+    protected void dispatchDraw(Canvas canvas) {
+        super.dispatchDraw(canvas);
         pattern.draw(canvas);
     }
 
