@@ -28,6 +28,19 @@ public class Practice05AfterOnDrawForegroundView extends AppCompatImageView {
     }
 
     @Override
+    public void draw(Canvas canvas) {
+        super.draw(canvas);
+        drawTag(canvas, "NEW");
+    }
+
+    private void drawTag(Canvas canvas, String tag) {
+        paint.setColor(Color.parseColor("#f44336"));
+        canvas.drawRect(0, 40, 200, 120, paint);
+        paint.setColor(Color.WHITE);
+        canvas.drawText("New", 20, 100, paint);
+    }
+
+    @Override
     public void onDrawForeground(Canvas canvas) {
         super.onDrawForeground(canvas);
 
