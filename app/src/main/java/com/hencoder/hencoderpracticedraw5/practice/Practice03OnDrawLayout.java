@@ -27,7 +27,7 @@ public class Practice03OnDrawLayout extends LinearLayout {
     {
         // 在这里插入 setWillNotDraw(false) 以启用完整的绘制流程
         //阻止跳过noDraw方法
-        setWillNotCacheDrawing(false);
+        setWillNotDraw(false);
     }
 
     @Override
